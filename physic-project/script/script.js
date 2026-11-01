@@ -13,7 +13,9 @@ let ball = {
 const logEl = document.getElementById('log')
 
 let stepCount = 0
-
+// inputs
+const newSpeed = document.getElementById('ballSpeedInput')
+const newXPos = document.getElementById('ballXInput')
 // buttons
 const btnStart = document.getElementById('btnStart');
 const btnStop = document.getElementById('btnStop');
@@ -21,21 +23,27 @@ const btnRestart = document.getElementById('btnRestart');
 
 btnStart.addEventListener('click', () => {
     isRunning = true;
+    ball.x = Number(newXPos.value);
+    ball.speed = Number(newSpeed.value);
 });
 
 btnStop.addEventListener('click', () => {
     isRunning = false;
     logRunning = false;
+    ball.x = Number(newXPos.value);
+    ball.speed = Number(newSpeed.value);
 });
 
 btnRestart.addEventListener('click', () => {
-    ball.x = 100;
+    ball.x = Number(newXPos.value)
     isRunning = false;
-    ball.speed = 15;
+    ball.speed = Number(newSpeed.value);
     logRunning = false;
     logEl.innerHTML = '';
     stepCount = 0
 });
+
+
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/css/style.css">
+    <title>ballSimXY</title>
+</head>
+<body>
+    <div class="container">
+        <canvas id="physCanvas" width='500px'height='300' ></canvas>
+        <div id="log"></div>
+    </div>
+
+    
+    <div class="buttons">
+        
+        <button id="btnStart">Запустить</button>
+        <button id="btnStop">Стоп</button>
+        <button id="btnRestart">Сброс</button>
+        
+    </div>
+
+    <div class="joystick-container">
+        <p>Угол: <span id="angleDisplay">45</span></p>
+        <canvas width="120" height="120" id="joyAngleCanvas"></canvas>
+    </div>
+
+
+    <div class="inputs">
+        <p>Введите скорость</p>
+        <input type="number" id="ballSpeedInput" value="15">
+        <p>Введите положение по координате x</p>
+        <input type="number" id="ballXInput" value="100">
+        <p>Введите положение по координате y</p>
+        <input type="number" id="ballYInput" value="100">
+    </div>
+
+    <a href="index.html">На главную</a>
+<script src="script/script1.js"></script>
+</body>
+</html>
